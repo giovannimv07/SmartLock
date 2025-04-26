@@ -1,0 +1,15 @@
+<div class="lockContainer">
+    <span>Lock Status</span>
+    <div class="locked" *ngIf="isLocked">
+        <button id="lockedButton" (click)="toggleLock()" class="icon-button">
+            <i class="fas fa-lock"></i>
+        </button>
+        <label for="lockedButton">Locked</label>
+    </div>
+    <div class="unlocked" *ngIf="!isLocked">
+        <button id="unlockedButton" (click)="toggleLock()" class="icon-button">
+            <i class="fas fa-unlock"></i>
+        </button>
+        <label for="unlockedButton">Unlocked</label>
+    </div>
+</div>
