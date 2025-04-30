@@ -1,0 +1,45 @@
+<div class="userContainer">
+    <span>Enter User</span>
+    <form (ngSubmit)="onSubmit(userForm.value)" #userForm="ngForm">
+        <div class="firstName">
+            <label for="name">First Name</label>
+            <input
+                type="text"
+                name="Name"
+                id="name"
+                placeholder="First Name"
+                required
+                ngModel
+            />
+        </div>
+        <div class="lastName">
+            <label for="lastName">Last Name</label>
+            <input
+                type="text"
+                name="LastName"
+                id="lastName"
+                placeholder="Last Name"
+                ngModel
+                required
+            />
+        </div>
+        <div class="code">
+            <label for="code">Code</label>
+            <input
+                type="text"
+                name="Code"
+                id="code"
+                placeholder="Enter 4 digit code"
+                minlength="4"
+                maxlength="4"
+                pattern="\d{4}"
+                ngModel
+                required
+            />
+        </div>
+        <div class="errorMessage" *ngIf="errorMessage.length > 0">
+            {{ errorMessage }}
+        </div>
+        <input class="button" type="submit" value="Add User" />
+    </form>
+</div>

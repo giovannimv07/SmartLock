@@ -1,6 +1,6 @@
-.lockContainer {
+.userContainer {
     background-color: rgb(236, 236, 236);
-    height: 300px;
+    height: auto;
     width: 300px;
     margin: 5px;
     padding: 10px;
@@ -12,38 +12,36 @@
     row-gap: 20px;
     offset: 10px;
 }
-.lockContainer span {
+.userContainer span {
     font-size: 30px;
     font-weight: bold;
     margin: 10px;
 }
-.locked,
-.unlocked {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 14px;
-    padding-top: 15px;
+    justify-content: center;
+    row-gap: 15px;
 }
-button {
-    border: black 3px solid;
-    border-radius: 50%;
-    padding: 25px;
+input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+.button {
     background-color: rgb(232, 229, 229);
     cursor: pointer;
+    width: 150px;
 }
-button:hover {
+.button:hover {
     background-color: rgb(207, 203, 203);
 }
-.fa-lock {
-    font-size: 50px;
-    color: red;
-}
-.fa-unlock {
-    font-size: 50px;
-    color: green;
-}
-label {
-    font-size: 25px;
-    font-weight: bold;
+.firstName,
+.lastName,
+.code {
+    display: flex;
+    flex-direction: column;
 }
